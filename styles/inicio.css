@@ -1,0 +1,858 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Geologica', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0.3vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff0000; 
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000000; 
+}
+
+#boton_arriba{
+    display: none;
+}
+.top_boton {
+    position: fixed;
+    float: right;
+    bottom: 2vh;
+    right: 1vw;
+    height: 5vh;
+    width: auto;
+    z-index: 1;
+}
+header {
+    height: 10vh;
+    display: flex;
+    align-items: center;  
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+.logo {
+    height: 12vh;
+}
+.nav_list{
+    list-style-type: none;
+    display: flex;
+    gap: 2rem; 
+}
+
+.nav_list li a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;   
+}
+
+.nav_list li a:hover {
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 1px #000000;
+}
+
+.check:checked + .nav{
+    background-color: #f5f5f5;
+}
+
+.nav_label,
+.check{
+    display: none;
+}
+
+/*----------EMPIEZA EL MAIN------------------------------------------------------------------------------------------------------*/
+
+#cuerpo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/*---------caja 1--------*/
+
+.caja_1 {
+    width: 100%;
+    height: 90vh;
+    background-image: url(../recursos/imagenes/fondos/fondo\ platea.png);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3vh;
+}
+
+.contenedor_inicial{
+    height: 50vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5vh;
+}
+.contenedor_interior{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.titulo_principal{
+    font-size: 6vw;
+    color: #ff0000;
+    letter-spacing: 0.8vw;
+    text-shadow: 0px 0px 10px black;
+}
+
+
+.sub_titulo_principal{
+    font-size: 2vw;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px black;
+    letter-spacing: 0.2vw;
+}
+
+.boton_reservar{
+    width: 20vw;
+    height: 5vh;
+    border: 1px solid #ffffffb6;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.2vw;
+    letter-spacing: 0.3vw;
+    transition: 1s;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1px;
+    text-shadow: 0px 0px 10px black;
+  
+}
+.boton_reservar:hover {
+    color: #ff0000;
+    box-shadow: 0 0 1px #ff0000;
+    border: 1px solid #ff0000;
+    text-shadow: 0px 0px 10px black;    
+}
+/*termina caja 1---------------------------------------------------------------------------------*/
+
+/*INICIA caja 2---------------------------------------------------------------------------------*/
+
+.caja_2{
+    width: 100vw;
+    height: 100vh;
+    background-color:#f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caja_central{
+    height: 90vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.caja_encabezado{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #222;
+}
+
+.titulo_De_caja{
+    font-size: 3vw;
+    color: #222;
+    letter-spacing: 1vw;
+}
+.caja_texto{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    color: #222;
+    border-bottom: 1px solid #222;
+}
+.texto{
+    font-size: 1.3vw;
+}
+.caja_redes{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2vh;
+}
+
+.icon_redes {
+    width: 3vw;
+    height: auto;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.icon_redes:hover {
+    width: 10vh;
+    height: auto;
+}
+
+
+/*termina caja 2---------------------------------------------------------------------------------*/
+/*CAJA 3-----------------------------------------------------------------*/
+.caja_3{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../recursos/imagenes/fondos/fondo\ platea.png);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caja_central_dos{
+    width: 80vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+}
+
+.caja_encabezado2{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.titulo_De_caja2{
+    font-size: 3vw;
+    color: #f8f8f8;
+    letter-spacing: 1vw;
+    text-shadow: 0px 0px 20px black;
+}
+.caja_secciones2{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    column-gap: 4%;
+}
+.l1 {
+    height: 80%;
+    width: 20%;
+    border: 1px solid #222;
+    transition: transform 0.2s ease;
+}
+
+.l1:hover{
+    box-shadow: 0px 0px 20px rgb(255, 255, 255);
+    transform: translate(0, -10px);
+}
+.sub_tit {
+   width: 100%;
+   height: 12%;
+   background-color: #000000;
+   color: #f8f8f8;
+   font-size: 1.2vw;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.price {
+    width: 100%;
+    height: 40%;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.time {
+    width: 100%;
+    height: 20%;
+    color: #999;
+    font-size: 1vw;
+    display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.value {
+    width: 100%;
+    height: 60%;
+    color: #f8f8f8;
+    font-size: 3vw;
+    display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.conditions {
+    width: 100%;
+    height: 36%;
+    background-color:#f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.conditions p {
+    width: 100%;
+    height: 33.3%;
+    color: #222;
+    font-size: 1vw;
+    display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.botton {
+    width: 100%;
+    height: 12%;
+    display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #11ff0085;
+     cursor: pointer;
+     transition: background-color 0.3s;
+     font-weight: bold;
+}
+.botton:hover {
+    background-color: #11ff00;
+    color: #000000;
+}
+
+
+/*TERMINA CAJA 3------------------------------------------------------*/
+
+/*CAJA 4---------------------------------------------------------------------------------*/
+
+.caja_4{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caja_central_3{
+    height: 90vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1vw;
+}
+
+.caja_secciones{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    column-gap: 1vw;
+    border-bottom: 1px solid #222;
+}
+
+.seccion{
+    width: 19vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh;
+}
+.circulo{
+    width: 80%;
+    height: 20vh;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #222;
+    padding: 2vh;
+    transition: transform 0.2s ease;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.circulo:hover{
+    background-color: #3254ff;
+    box-shadow: 5px 5px 20px black;
+    transform: translate(0, -10px);
+}
+
+.logo_asset{
+    height: 8vh;
+    width: auto;
+    color: #222;
+    transition: 0.3s;
+}
+.logo_asset:hover{
+    height: 10vh;
+    width: auto;
+}
+.tit_sub_caja{
+    font-size: 1.7vw;
+    color: #000000;
+}
+
+/*TERMINA CAJA 4----------------------------------------------------------------------------*/
+
+/*CAJA 5---------------------------------------------------------------------------------*/
+.caja_5{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../recursos/imagenes/fondos/fondo\ platea.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.contact-in{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px  #000000;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.contact-map{
+    width: 50%;
+    height: 100%;
+}
+
+.contact-map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.contact-form{
+    width: 100%;
+    height: 100%;
+    flex: 50%;
+    padding: 2vh 5vw;
+    text-align: center;
+}
+
+.contact-form h1{
+    font-size: 4vw;
+    color: #ffffff;
+    letter-spacing: 0.1vw;
+    text-shadow: 0 0 20px  #000000;
+}
+
+.contact-form h3{
+    margin-bottom: 3vh;
+    color: #ff0000;
+    text-shadow: 0 0 20px  #000000;
+    font-size: 1.5vw;
+    letter-spacing: 0.1vw;
+    
+}
+
+.contact-form-txt{
+    width: 100%;
+    height: 20%;
+    color: #000;
+    margin-bottom: 3vh;
+    padding: 2vh;
+    box-shadow: 0px 0px 20px black;
+}
+
+.contact-form-txt::placeholder{
+    color: #707070;
+}
+
+
+.contact-form-textarea{
+    width: 100%;
+    height: 20vh;
+    color: #000;
+    border: 1px solid #aaa;
+    outline: none;
+    margin-bottom: 2vh;
+    padding: 2vh;
+    box-shadow: 0px 0px 20px black;
+   
+}
+.contact-form-btn{
+    width: 100%;
+    height: auto;
+    border: none;
+    outline: none;
+    background: #00000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    text-transform: uppercase;
+    padding: 1vh 0;
+    cursor: pointer;
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+    box-shadow: 0px 0px 20px black;
+}
+.contact-form-btn:hover{
+    color: #ff0000;
+    background: #000000;
+    border: 1px solid #ff0000;
+    box-shadow: 0px 0px 20px rgb(255, 0, 0);
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+
+
+
+/* ----------termina main -------------------------------*/
+
+/*MEDIA QUERY PARA CELULAR -------------------------*/
+
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .nav_label{
+        cursor: pointer;
+        display: block;
+    }
+
+    .nav {
+        display: none;
+       
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+
+
+    .nav {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        bottom: 0;
+        background-color: #f5f5f5;
+        border-top: 2px solid rgb(150, 150, 150);
+        padding: 2rem;
+        clip-path: inset(0 0 100% 0);
+        transition: clip-path 0.5s ease-in-out;  
+        z-index: 1;
+    }
+
+    .nav_list{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5vh;
+    }
+
+    .check:checked + .nav{
+        clip-path: inset(0 0 0 0);
+    }
+
+    /*caja 1----*/
+    .contenedor_inicial{
+        height: 40vh;
+        width: 80vw;
+        row-gap: 4vh;
+    }
+
+    .titulo_principal{
+        font-size: 12vw;
+    }
+    
+    .sub_titulo_principal{
+        font-size: 4vw;
+    }
+    
+    .boton_reservar{
+        width: 40vw;
+        height: 6vh;
+        font-size: 3vw;
+        letter-spacing: 0.3vw;
+    }
+    /*fin caja 1----*/
+
+    /*caja2*/
+
+    .caja_2{
+        height: auto;
+    }
+    .caja_central{
+        height: auto;
+        width: 90vw;
+    }
+    .caja_encabezado{
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid #222;
+        margin-top: 5vh;
+    }
+    .espacio{
+        height: 5vh;
+        width: 100%;
+
+    }
+    .caja_texto{
+        width: 80vw;
+        height: auto;
+    }
+    .titulo_De_caja{
+        font-size: 6vw;
+    }
+    .texto{
+        font-size: 3vw;
+    }    
+    .icon_redes {
+        width: 6vw;
+    }
+
+    
+
+    /*fin de caja 2*/
+    /*CAJA 3----------------------------*/
+    .caja_3{
+        width: 100vw;
+        height: auto;
+        background-image: url(../recursos/imagenes/fondos/fondo\ platea.png);
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+    .caja_central_dos{
+        width: 90vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+    }
+    
+    .caja_encabezado2{
+        width: 100%;
+        height: 30vh;
+    }
+    .titulo_De_caja2{
+        font-size: 6vw;
+    }
+    .caja_secciones2{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        row-gap: 5vh;
+    }
+    .l1 {
+        height: 50vh;
+        width: 80%;
+        border: 1px solid #222;
+        transition: transform 0.2s ease;
+    }
+    
+    .l1:hover{
+        box-shadow: 0px 0px 0px rgb(255, 255, 255);
+        transform: translate(0, -10px);
+    }
+    .sub_tit {
+       font-size: 3vw;
+    }
+    .time {
+        font-size: 3vw;
+    }
+    .value {
+        font-size: 8vw;
+    }
+    .conditions p {
+        font-size: 3vw;
+    }
+    .botton {
+        width: 100%;
+        height: 12%;
+        display: flex;
+         align-items: center;
+         justify-content: center;
+         background-color: #11ff0085;
+         cursor: pointer;
+         transition: background-color 0.3s;
+         font-weight: bold;
+    }
+    .botton:hover {
+        background-color: #11ff00;
+        color: #000000;
+    }
+    
+    
+    /*FIN DE CAJA 3*/
+    /*CAJA 4---------------------------------------------------*/
+    .caja_4{
+        width: 100vw;
+        height: auto;
+        background-color: #f8f8f8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+    .caja_central_3{
+        height: auto;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0vw;
+    }
+    
+    .caja_secciones{
+        height: auto;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0vw;
+        padding-right: 0vw;
+        column-gap: 0vw;
+        row-gap: 2vh;
+        border-bottom: 1px solid #222;
+    }
+    
+    .seccion{
+        width: 80vw;
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2vh;
+    }
+    .circulo{
+        width: 80%;
+        height: 20vh;
+        border-radius: 0px;
+    }
+
+    .tit_sub_caja{
+        font-size: 3vw;
+        color: #000000;
+    }
+    
+    /*FIN DE CAJA 4*/
+    /*Caja 5-----------------------------------------------------*/
+    .contact-in{
+        width: 96%;
+        height: 94%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px  #000000;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+    
+    .contact-map{
+        width: 96vw;
+        height: 25vh;
+    }
+    
+    .contact-map iframe{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .contact-form{
+        width: 96vw;
+        height: 65vh;
+        
+        padding: 2vh 5vw;
+        text-align: center;
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+    }
+
+    .caja_redes{
+        height: 20vh;
+        width: 90vw;
+    }
+}
+
+/*media query TABLET*/
+/*-------------------*/@media screen and (min-width: 767px) and (max-width: 1024px) { 
+
+    
+}

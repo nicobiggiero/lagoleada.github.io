@@ -1,0 +1,580 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Geologica', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff0000; /*Colordelthumb(lapartequepuedesarrastrar)*/
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #000000; /* Color de fondo de la barra de desplazamiento */
+}
+
+#boton_arriba{
+    display: none;
+}
+.top_boton {
+    position: fixed;
+    float: right;
+    bottom: 2vh;
+    right: 1vw;
+    height: 5vh;
+    width: auto;
+    z-index: 1;
+}
+
+
+header {
+    height: 10vh;
+    display: flex;
+    align-items: center;  
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #f5f5f5;
+
+}
+
+.logo {
+    height: 12vh;
+}
+
+.nav_list{
+    list-style-type: none;
+    display: flex;
+    gap: 2rem; 
+}
+
+.nav_list li a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;   
+}
+
+.nav_list li a:hover {
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 1px #000000;
+}
+
+.check:checked + .nav{
+    background-color: #f5f5f5;
+}
+
+.nav_label,
+.check{
+    display: none;
+}
+
+/*EMPIEZA EL MAIN------------------------------------------------------------------------------------------*/
+
+#cuerpo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#columna{
+    width: 80%;
+    height: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.tit_h1{
+    font-size: 2vw;
+    color: #000000;
+    margin-bottom: 1vh;
+}
+.tit_h2{
+    font-size: 1.7vw;
+    color: #222;
+    margin-bottom: 1vh;
+}
+
+.txt_p{
+    font-size: 1.3vw;
+    color: #444;
+    margin-bottom: 2vh;
+}
+
+
+/* primera imagen ----------------*/
+.img_contenido{
+    width: 100%;
+    height: 50vh;
+    background-image: url(../recursos/imagenes/fondos_completos/fondo\ mitad\ de\ altura.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+
+.logo_contenido{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.logo_chico{
+    height: 40vh;
+    animation:blur-in-expand 0.4s linear both;
+    -webkit-animation:blur-in-expand 0.4s linear both;
+}
+
+.logo_chico:hover{
+    filter: drop-shadow(0px 0px 20px red);
+    -webkit-filter: drop-shadow(0px 0px 20px red);
+}
+
+.tit_h1_2{
+    font-size: 5vw;
+    font-weight: bold;
+    color: #f5f5f5;
+    letter-spacing: 0.2vw;
+    text-shadow: 0px 0px 30px black;
+}
+
+.txt_p_2{
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: #f5f5f5;
+    letter-spacing: 0.2vw;
+    text-shadow: 0px 0px 20px black;
+}
+/*------------------------------------------------*/
+
+/*4 IMAGENES-----------------------------*/
+.imagenes{
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 2vh;
+}
+.doble_imagen{
+    width: 100%;
+    height: 50vh;
+    row-gap: 6%;
+    column-gap: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor_img{
+    height: 97%;
+    width: 49%;
+}
+.img_s{
+    height: 100%;
+    width: 100%;
+}
+/*----------------------------------*/
+
+/*TABLA ----------------------------*/
+.tabla{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(0, 0, 0);
+}
+.titulo_tabla{
+    font-size: 1.1vw;
+    text-align: center;
+    background-color: rgb(255, 0, 0);
+    padding: 2vw;
+}
+
+.infantiles{
+    font-size: 1vw;
+    text-align: center;
+    background-color: rgb(114, 255, 114);
+    padding: 2vw;
+}
+.juveniles{
+    font-size: 1vw;
+    text-align: center;
+    background-color: rgb(255, 246, 114);
+    padding: 2vw;
+}
+.cadetes{
+    font-size: 1vw;
+    text-align: center;
+    background-color: rgb(255, 145, 114);
+    padding: 2vw;
+}
+
+.contacto_btn{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boton_contacto{
+    height: 6vh;
+    width: 15vw;
+    border: 2px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.boton_contacto:hover{
+    box-shadow: 0px 0px 10px #000000;
+    border: 2px solid #888;
+}
+
+.texto_de_btn{
+    color: #222;
+    font-size: 1.4vw;
+    transition: 0.3s;
+}
+.texto_de_btn:hover{
+    color: #000000;
+    font-size: 1.4vw;
+}
+/*----------------------------------*/
+
+/*media query celular*/
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .nav_label{
+        cursor: pointer;
+        display: block;
+    }
+
+    .nav {
+        display: none;
+       
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+
+
+    .nav {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        bottom: 0;
+        background-color: #f5f5f5;
+        border-top: 2px solid rgb(150, 150, 150);
+        padding: 2rem;
+        clip-path: inset(0 0 100% 0);
+        transition: clip-path 0.5s ease-in-out;  
+        z-index: 1;
+    }
+
+    .nav_list{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5vh;
+    }
+
+    .check:checked + .nav{
+        clip-path: inset(0 0 0 0);
+    }
+
+    #columna{
+        width: 90%;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    
+    .tit_h1{
+        font-size: 6vw;
+    }
+    .tit_h2{
+        font-size: 4vw;
+    }
+    
+    .txt_p{
+        font-size: 3vw;
+    }
+
+    .imagenes{
+        width: 100%;
+        height: auto;
+        margin-bottom: 5vh;
+        margin-top: 5vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 2.5vh;
+    }
+    .doble_imagen{
+        width: 100%;
+        height: auto;
+        row-gap: 2.5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contenedor_img{
+        height: 50vh;
+        width: 100%;
+    }
+    .img_s{
+        height: 100%;
+        width: 100%;
+    }
+    .tabla{
+        width: 100%;
+        height: auto;
+        background-color: rgb(0, 0, 0);
+    }
+    .titulo_tabla{
+        font-size: 3vw;
+        text-align: center;
+        background-color: rgb(255, 0, 0);
+        padding: 2vw;
+    }
+    
+    .infantiles{
+        font-size: 3vw;
+        text-align: center;
+        background-color: rgb(114, 255, 114);
+        padding: 2vw;
+    }
+    .juveniles{
+        font-size: 3vw;
+        text-align: center;
+        background-color: rgb(255, 246, 114);
+        padding: 2vw;
+    }
+    .cadetes{
+        font-size: 3vw;
+        text-align: center;
+        background-color: rgb(255, 145, 114);
+        padding: 2vw;
+    }
+}
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*media query TABLET*/
+/*-------------------*/@media screen and (min-width: 767px) and (max-width: 1024px) {
+    .nav_label{
+        cursor: pointer;
+        display: block;
+    }
+
+    .nav {
+        display: none;
+       
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+
+
+    .nav {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        bottom: 0;
+        background-color: #f5f5f5;
+        border-top: 2px solid rgb(150, 150, 150);
+        padding: 2rem;
+        clip-path: inset(0 0 100% 0);
+        transition: clip-path 0.5s ease-in-out;  
+        z-index: 1;
+    }
+
+    .nav_list{
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5vh;
+    }
+
+    .check:checked + .nav{
+        clip-path: inset(0 0 0 0);
+    }
+    #cuerpo{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #columna{
+        width: 80%;
+        height: auto;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+    
+    .tit_h1{
+        font-size: 3vw;
+        color: #000000;
+        margin-bottom: 1vh;
+    }
+    .tit_h2{
+        font-size: 2.5vw;
+        color: #222;
+        margin-bottom: 1vh;
+    }
+    
+    .txt_p{
+        font-size: 2vw;
+        color: #444;
+        margin-bottom: 2vh;
+    }
+    
+    
+    /* primera imagen ----------------*/
+    .img_contenido{
+        width: 100%;
+        height: 50vh;
+        background-image: url(../recursos/imagenes/fondos_completos/fondo\ mitad\ de\ altura.png);
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+    }
+    
+    
+    .logo_contenido{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+    
+    .logo_chico{
+        height: 40vh;
+        animation:blur-in-expand 0.4s linear both;
+        -webkit-animation:blur-in-expand 0.4s linear both;
+    }
+    
+    .logo_chico:hover{
+        filter: drop-shadow(0px 0px 20px red);
+        -webkit-filter: drop-shadow(0px 0px 20px red);
+    }
+    
+    /*------------------------------------------------*/
+    
+    /*4 IMAGENES-----------------------------*/
+    .imagenes{
+        width: 100%;
+        height: auto;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 2vh;
+    }
+    .doble_imagen{
+        width: 100%;
+        height: auto;
+        column-gap: 2vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .contenedor_img{
+        height: 50vh;
+        width: 50%;
+    }
+    .img_s{
+        height: 100%;
+        width: 100%;
+    }
+    /*----------------------------------*/
+    
+    /*TABLA ----------------------------*/
+    .tabla{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+    }
+    .titulo_tabla{
+        font-size: 2vw;
+        text-align: center;
+        background-color: rgb(255, 0, 0);
+        padding: 2vw;
+    }
+    
+    .infantiles{
+        font-size: 2vw;
+        text-align: center;
+        background-color: rgb(114, 255, 114);
+        padding: 2vw;
+    }
+    .juveniles{
+        font-size: 2vw;
+        text-align: center;
+        background-color: rgb(255, 246, 114);
+        padding: 2vw;
+    }
+    .cadetes{
+        font-size: 2vw;
+        text-align: center;
+        background-color: rgb(255, 145, 114);
+        padding: 2vw;
+    }
+    
+
+}
